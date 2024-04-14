@@ -30,37 +30,36 @@ class UserInputToCompileForTest
 
     public static void PrintResult(int[] array)
     {
-        int[] WriteInArray(int size, int min, int max) //Функция записи в массив 
-        {
-            array = new int[size];
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = new Random().Next(min, max + 1);
-            }
-            return array;
-        }
-        void PrintArray(int[] array) // функция печати массива
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                System.Console.Write(array[i] + " ");
-            }
-            System.Console.WriteLine();
-        }
-        System.Console.WriteLine("Введите размер массива: ");
-        int size = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine("Введите минимальное значение элемента: ");
-        int min = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine("Введите максимальное значение элемента: ");
-        int max = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine("Введите минимальное значение границы диапазона: ");
-        int minRange = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine("Введите максимальное значение границы диапазона: ");
-        int maxRange = Convert.ToInt32(Console.ReadLine());
+        // int[] WriteInArray(int size, int min, int max) //Функция записи в массив 
+        // {
+        //     array = new int[size];
+        //     for (int i = 0; i < array.Length; i++)
+        //     {
+        //         array[i] = new Random().Next(min, max + 1);
+        //     }
+        //     return array;
+        // }
+        // void PrintArray(int[] array) // функция печати массива
+        // {
+        //     for (int i = 0; i < array.Length; i++)
+        //     {
+        //         System.Console.Write(array[i] + " ");
+        //     }
+        //     System.Console.WriteLine();
+        // }
+        //System.Console.WriteLine("Введите размер массива: ");
+        //int size = Convert.ToInt32(Console.ReadLine());
+        // System.Console.WriteLine("Введите минимальное значение элемента: ");
+        // int min = Convert.ToInt32(Console.ReadLine());
+        // System.Console.WriteLine("Введите максимальное значение элемента: ");
+        // int max = Convert.ToInt32(Console.ReadLine());
+        //System.Console.WriteLine("Введите минимальное значение границы диапазона: ");
+        int minRange = 10; //Convert.ToInt32(Console.ReadLine());
+        //System.Console.WriteLine("Введите максимальное значение границы диапазона: ");
+        int maxRange = 90; //Convert.ToInt32(Console.ReadLine());
 
-
-        WriteInArray(size,min,max);
-        PrintArray(array);
+        //WriteInArray(size,min,max);
+        //PrintArray(array);
         System.Console.WriteLine(CountItemsRange(array, minRange, maxRange));
     }
 
