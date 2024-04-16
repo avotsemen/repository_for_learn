@@ -10,7 +10,7 @@ class Program
     {
         bool InputNum()
         {
-            System.Console.WriteLine("Введите любое целое число или 'q' для выхода: ");
+            System.Console.WriteLine("Введите любое целое число сумма цифр которого чётная или 'q' для выхода: ");
             string input = System.Console.ReadLine();
 
             if (input == "q")
@@ -26,14 +26,15 @@ class Program
                     int num = Convert.ToInt32(input);
                     if (num > 0)
                     {
-                        int lenStr = input.Length;
                         int sum = 0;
-                        for (int i = 1; i < lenStr; i++)
+                        while (num > 0)
                         {
-                            sum = sum + num / (int)Math.Pow(10, lenStr - i);
-                            num = num % (int)Math.Pow(10, lenStr - i);
+                            sum = sum + num % 10;
+                            num = num / 10;
                         }
-                        sum = sum + num;
+
+                        num = Convert.ToInt32(input);
+
                         if (sum % 2 == 0)
                         {
                             System.Console.WriteLine($"Вы ввели число {num}, сумма цифр которого равна {sum} - это четное число. До свидания!");
